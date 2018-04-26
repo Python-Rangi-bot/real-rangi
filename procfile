@@ -1,1 +1,1 @@
-worker: node Rangi.py
+worker: python Rangi.py

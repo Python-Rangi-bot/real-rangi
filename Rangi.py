@@ -69,7 +69,7 @@ async def 랑이():
         ]
     await bot.say(random.choice(possible_responses)
 
-bot.run(os.environ.get('BOT_TOKEN'))
+bot.run(os.environ.get['BOT_TOKEN'])
 
 
 

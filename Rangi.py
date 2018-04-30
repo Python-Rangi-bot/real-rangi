@@ -36,12 +36,6 @@ async def 랑이야():
         ]
     await bot.say(random.choice(possible_responses))
 
-@bot.event
-async def on_message(message):
-    if message.content ==("누구"):
-        await client.send_message(message.channel, "으에에에!나...날 아직 모른다는 것이냐?!")
-    await bot.process_commands(message)
-    
 @bot.command()    
 async def 안녕():
     possible_responses = [

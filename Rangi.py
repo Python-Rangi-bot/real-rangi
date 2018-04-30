@@ -5,7 +5,7 @@ from discord.voice_client import VoiceClient
 import asyncio
 import time
 import random
-
+import os
 
 startup_extensions = ["Music"]
 bot = commands.Bot("")

@@ -7,7 +7,7 @@ import time
 import random
 import os
 
-startup_extensions = ["Music"]
+#startup_extensions = ["Music"]
 bot = commands.Bot("")
 
 import Music as startup_extensions

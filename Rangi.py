@@ -68,15 +68,6 @@ async def 랑이():
         '무엇이느냐?',
         ]
     await bot.say(random.choice(possible_responses)
-             
-if __name__ == "__main__":
-    for extension in startup_extensions:
-        try:
-            bot.load_extension(extension)
-        except Exception as e:
-            exc = '{}: {}'.format(type(e).__name__, e)
-            print('Failed to load extension {}\n{}'.format(extension, exc))
-
 
 bot.run(os.environ.get['BOT_TOKEN'])
 

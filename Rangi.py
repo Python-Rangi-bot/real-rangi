@@ -9,9 +9,8 @@ import os
 
 #startup_extensions = ["Music"]
 bot = commands.Bot("")
-
 import Music as startup_extensions
-# startup_extensions = ["Music"]
+
 
 @bot.event
 async def on_ready():

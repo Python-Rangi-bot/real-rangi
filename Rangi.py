@@ -35,7 +35,16 @@ async def 랑이야():
         '아우우우우! 랑이님은 지금 없는 거에요',
         ]
     await bot.say(random.choice(possible_responses))
+if __name__ == "__main__":      
+    for extension in startup_extensions:
+        try:
+            bot.load_extension(extension)
+        except Exception as e:
+            exc = '{}: {}'.format(type(e).__name__, e)
+            print('Failed to load extension {}\n{}'.format(extension, exc))
 
+
+    
 @bot.command()    
 async def 안녕():
     possible_responses = [

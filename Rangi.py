@@ -18,7 +18,7 @@ async def on_ready():
     print("준비 되었느니라")
 
 class Main_Commands():
-    def __init__(self, bot):
+    def _init_(self, bot):
         self.bot = bot
 
 @bot.command()

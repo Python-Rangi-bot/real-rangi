@@ -8,7 +8,6 @@ import time
 import random
 import os
 import functools, youtube_dl
-await voice.create_ytdl_player("youtube link")
 
 bot = commands.Bot("")
 @bot.event
@@ -86,4 +85,5 @@ ydl = youtube_dl.YoutubeDL(opts)
 func = functools.partial(ydl.extract_info, url, download=False)
 info = func()
 player = discord.FFmpegPCMAudio(info['url'])
+
 bot.run(os.environ['BOT_TOKEN']) 

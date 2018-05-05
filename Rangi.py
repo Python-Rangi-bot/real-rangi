@@ -7,6 +7,9 @@ import time
 import random
 import os
 
+#startup_extensions = ["Music"]
+bot = commands.Bot("")
+
 @bot.event
 async def on_ready():
     print("준비 되었느니라")

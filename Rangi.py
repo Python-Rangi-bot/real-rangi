@@ -70,7 +70,7 @@ async def 랑이():
     await bot.say(random.choice(possible_responses))
     
 @bot.event
-    try:
+   try:
         if not discord.opus.is_loaded():
              discord.opus.load_opus('opus library file')
     except OSError:

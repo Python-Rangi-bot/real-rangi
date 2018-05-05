@@ -2,10 +2,12 @@ import discord
 from discord.ext.commands import Bot
 from discord.ext import commands
 from discord.voice_client import VoiceClient
+from discord import opus 
 import asyncio
 import time
 import random
 import os
+import functools, youtube_dl
 
 
 bot = commands.Bot("")
@@ -66,5 +68,24 @@ async def 랑이():
         '무엇이느냐?',
         ]
     await bot.say(random.choice(possible_responses))
-                  
+    
+@bot.event
+    try:
+        if not discord.opus.is_loaded():
+             discord.opus.load_opus('opus library file')
+    except OSError:
+            pass
+        
+if message.content.startswith('p'):
+  channel = discord.utils.get(message.server.channels, type=discord.ChannelType.voice)
+  voice = await client.join_voice_channel(channel)
+  player = await voice.create_ffmpeg_player('file.mp3')
+  player.start()
+url = 'youtube url'
+opts = {"format": 'webm[abr>0]/bestaudio/best',"ignoreerrors": True,"default_search": "auto","source_address": "0.0.0.0",'quiet': True}
+ydl = youtube_dl.YoutubeDL(opts)
+func = functools.partial(ydl.extract_info, url, download=False)
+info = func()
+player = discord.FFmpegPCMAudio(info['url'])
+
 bot.run(os.environ['BOT_TOKEN']) 

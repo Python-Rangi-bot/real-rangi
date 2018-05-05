@@ -5,18 +5,16 @@ from discord.voice_client import VoiceClient
 import asyncio
 import time
 import random
+import os
 
 
-startup_extensions = ["Music"]
 bot = commands.Bot("")
-
-
 @bot.event
 async def on_ready():
     print("준비 되었느니라")
 
 class Main_Commands():
-    def _init_(self, bFot):
+    def _init_(self, bot):
         self.bot = bot
 
 @bot.command()

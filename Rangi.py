@@ -8,7 +8,7 @@ import time
 import random
 import os
 import functools, youtube_dl
-
+await voice.create_ytdl_player("youtube link")
 
 bot = commands.Bot("")
 @bot.event
@@ -75,7 +75,6 @@ async def 랑이():
              discord.opus.load_opus('opus library file')
     except OSError:
             pass
-        
 if message.content.startswith('p'):
   channel = discord.utils.get(message.server.channels, type=discord.ChannelType.voice)
   voice = await client.join_voice_channel(channel)
@@ -87,5 +86,4 @@ ydl = youtube_dl.YoutubeDL(opts)
 func = functools.partial(ydl.extract_info, url, download=False)
 info = func()
 player = discord.FFmpegPCMAudio(info['url'])
-
 bot.run(os.environ['BOT_TOKEN']) 

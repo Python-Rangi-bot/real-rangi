@@ -66,4 +66,4 @@ async def 랑이():
         '무엇이느냐?',
         ]
     await bot.say(random.choice(possible_responses)             
-bot.run(os.environ['BOT_TOKEN'])
+                  bot.run(os.environ['BOT_TOKEN'])

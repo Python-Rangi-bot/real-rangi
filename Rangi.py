@@ -65,5 +65,4 @@ async def 랑이():
         '으에에에? 날 불렀느냐?',
         '무엇이느냐?',
         ]
-    await bot.say(random.choice(possible_responses)             
-                  bot.run(os.environ['BOT_TOKEN'])
+    await bot.say(random.choice(possible_responses)bot.run(os.environ['BOT_TOKEN']) 

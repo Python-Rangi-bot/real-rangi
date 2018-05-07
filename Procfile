@@ -1,1 +1,1 @@
-worker: python Rangi.py
+worker: python Rangi.py and Music.py

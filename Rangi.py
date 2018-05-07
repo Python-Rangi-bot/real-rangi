@@ -69,9 +69,6 @@ async def 랑이():
     await bot.say(random.choice(possible_responses))
     
 @bot.event
-import asyncio
-import discord
-from discord.ext import commands
 if not discord.opus.is_loaded():
     
     discord.opus.load_opus('opus')

@@ -70,7 +70,6 @@ async def 랑이():
     
 @bot.event
 if not discord.opus.is_loaded():
-    
     discord.opus.load_opus('opus')
 
 def __init__(self, bot):
